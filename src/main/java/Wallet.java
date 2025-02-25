@@ -81,7 +81,7 @@ public class Wallet {
             if (remaining == 0) break;
         }
 
-        // Logika penarikan dari uang koin jika masih ada sisa dari penarikan uang lembaran
+        // penarikan uang koin jika masih ada sisa dari penarikan uang lembaran
         for (int uang : tempUangKoin) {
             if (uang <= remaining) {
                 remaining -= uang;
@@ -90,7 +90,7 @@ public class Wallet {
             if (remaining == 0) break;
         }
 
-        // Jika berhasil (remaining == 0), uang asli dari dompet akan dihapus
+        // Jika remaining = 0, uang asli dari wallet akan dihapus
         if (remaining == 0) {
             uangLembaran.removeAll(toRemoveLembaran);
             uangKoin.removeAll(toRemoveKoin);
